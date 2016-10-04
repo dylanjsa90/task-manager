@@ -2,7 +2,6 @@
 
 require('!!file?name=[name].[ext]!./html/index.html');
 require('./scss/base.scss');
-process.env.APP_SECRET = 'debugsecret';
 
 const angular = require('angular');
 let listApp = angular.module('listApp', [require('angular-route'), require('angular-jwt')]);
