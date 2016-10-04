@@ -1,12 +1,13 @@
 {
-  "name": "lab-dylan",
+  "name": "task-manager",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "node server.js",
+    "heroku-postbuild": "./node_modules/webpack/bin/webpack.js",
     "watch": "./node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot",
-    "test": "./node_modules/karma/bin/karma start",
-    "heroku-postbuild": "./node_modules/webpack/bin/webpack.js"
+    "test": "./node_modules/karma/bin/karma start"
   },
   "keywords": [],
   "author": "",
