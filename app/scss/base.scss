@@ -18,7 +18,8 @@ body {
 }
 
 main {
-  margin-right: 100px;
+  width: 80%;
+  margin: 0px auto;
 }
 
 .list-form {
@@ -33,8 +34,8 @@ ds-list {
   margin-top: 10px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: flex-end;
+  align-items: stretch;
+  // justify-content: flex-end;
 }
 .title-subhead {
   border: 5px solid black;

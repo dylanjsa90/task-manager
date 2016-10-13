@@ -32,6 +32,6 @@ module.exports = function(app) {
     // }
     this.getUser = auth.getUser.bind(auth);
     this.logOut = auth.logOut.bind(auth);
-    this.currentUser = auth.currentUser;
+    this.currentUser = auth.currentUser.username;
   }]);
 };
