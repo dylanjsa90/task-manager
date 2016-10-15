@@ -18,7 +18,10 @@ body {
 }
 
 main {
-  margin-right: 100px;
+  margin: 2% auto;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
 }
 
 .list-form {
@@ -33,14 +36,16 @@ main {
 ds-list {
   margin-top: 10px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  // flex-wrap: wrap;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
 }
 .title-subhead {
   border: 5px solid black;
   display: inline-block;
-  margin-left: 10em;
+  margin: 0px auto;
+  width: 50%;
   padding: 5px;
 }
 
@@ -48,4 +53,8 @@ sign-up, sign-in {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+li {
+  list-style: none;
 }

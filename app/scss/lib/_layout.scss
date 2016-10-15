@@ -5,11 +5,12 @@
 }
 
 .signup-layout {
-  width: 100%;
+  width: 50%;
   display: flex;
   align-items: center;
   justify-content: flex-end;
 }
+
 
 .signup-form {
   display: flex;
@@ -19,7 +20,7 @@
 }
 
 .signin-layout {
-  width: 100%;
+  width: 50%;
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -34,12 +35,19 @@
 
 .app-main {
   display: flex;
+  
+  flex-flow: column-wrap;
+  align-content: stretch;
+}
+
+.app-list {
+  display: flex;
   flex-direction: row;
   align-items: stretch;
 }
 
-ds-list {
+.list-form {
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  width: 50%;
+  margin: 0px auto;
 }
