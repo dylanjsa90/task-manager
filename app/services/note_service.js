@@ -22,13 +22,10 @@ module.exports = function(app) {
 
     service.deleteNote = function(noteId) {
       return $q((resolve, reject) => {
-        $http.delete(`${url}/${noteId}`, config)
-          .then(res => {
-            resolve(res.data);
-          })
-          .catch(err => {
-            reject(err);
-          });
+        $http.delete(`${url}/${noteId}`, config).then(res => {
+          resolve(res.data);
+        })
+        .catch(err => reject(err));
       });
     };
 
@@ -36,7 +33,8 @@ module.exports = function(app) {
       return $q((resolve, reject) => {
         $http.put(`${url}/${noteId}`, data, config).then(res => {
           resolve(res.data);
-        }).catch(err => reject(err));
+        })
+        .catch(err => reject(err));
       });
     };
     return service;

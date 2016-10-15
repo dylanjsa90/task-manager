@@ -3,8 +3,8 @@
   <h1>{{listCtrl.list.name}}</h1>
   <ul>
     <li>
-      <ds-note-li data-ng-repeat="item in listCtrl.list.notes" note="item" delete-note="listCtrl.deleteNote(noteId)" ></ds-note-li>
       <list-note-form create-note="listCtrl.createNote(note)"></list-note-form>
+      <ds-note-li data-ng-repeat="item in listCtrl.list.notes" note="item" remove="listCtrl.deleteNote(note)" ></ds-note-li>
     </li>
   </ul>
 </div>

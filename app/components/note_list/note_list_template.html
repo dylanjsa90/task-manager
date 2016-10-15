@@ -1,5 +1,5 @@
 <li class="note-li">
-  <i class="fa fa-trash-o" data-ng-click="noteCtrl.deleteNote({noteId: noteListCtrl.note._id})"></i>
-  <h2>{{noteCtrl.note.name}}</h2>
-  <p>{{noteCtrl.note.content}}</p>
+  <h2> Name: {{noteCtrl.note.name}}</h2>
+  <p>Content: {{noteCtrl.note.content}}</p>
+  <i class="fa fa-trash-o" data-ng-click="noteCtrl.removeNote(noteCtrl.note)"></i>
 </li>

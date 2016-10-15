@@ -2,13 +2,6 @@
 
 module.exports = (app) => {
   app.controller('ListController', ['$q', 'listService', 'noteService', 'auth', function ($q, listService, noteService, auth) {
-
-    // this.token = auth.getToken();
-    // this.listUrl = this.baseUrl + '/api/list';
-    // this.config.headers['Authorization'] = 'Bearer ' + this.token;
-    // this.getLists = function() {
-    //   listService.fetchLists();
-    // }
     
     this.deleteList = function() {
       listService.deleteList(this.list._id)
@@ -22,6 +15,7 @@ module.exports = (app) => {
         noteService.createNote(data)
           .then(note => {
             this.list.notes.push(note);
+            this.note = {};
             resolve(note);
           })
           .catch((err) => {
@@ -31,14 +25,17 @@ module.exports = (app) => {
       });
     };
 
-    this.deleteNote = function(noteId) {
-      noteService.deleteNote(noteId).then(() => {
+    this.deleteNote = function(noteToDelete) {
+      console.log('note to delete: ' + noteToDelete._id)
+      noteService.deleteNote(noteToDelete._id)
+      .then(() => {
         this.list.notes.forEach((note, index) => {
-          if (note._id === noteId) this.list.notes.splice(index, 1);
-        })
-        .catch(() => alert('error on note deletion'));
-      });
+          if (noteToDelete._id === note._id) this.list.notes.splice(index, 1);
+        });
+      })
+      .catch(() => alert('error on note deletion'));
     };
+    
 
     
     

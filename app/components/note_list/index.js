@@ -1,9 +1,11 @@
 'use strict';
 
 module.exports = function(app) {
-  app.controller('NoteController', ['noteService', function(noteService) {
-    this.editNote = function(noteId, content) {
-      // noteService.updateNote().then(())
+  app.controller('NoteController', ['noteService', '$scope', function(noteService, $scope) {
+    // this.remove = $scope.remove;
+    // this.note = $scope.note;
+    this.removeNote = () => {
+      this.remove({note: this.note});
     };
   }]);
 
@@ -17,8 +19,8 @@ module.exports = function(app) {
       bindToController: true,
       scope: {
         note: '=',
-        deleteNote: '&'
-      }
+        remove: '&'
+      },
     };
   });
 };
