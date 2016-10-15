@@ -3,9 +3,12 @@
 module.exports = (app) => {
   app.controller('ListController', ['$q', 'listService', 'noteService', 'auth', function ($q, listService, noteService, auth) {
 
-    this.token = auth.getToken();
-    this.listUrl = this.baseUrl + '/api/list';
-    this.config.headers['Authorization'] = 'Bearer ' + this.token;
+    // this.token = auth.getToken();
+    // this.listUrl = this.baseUrl + '/api/list';
+    // this.config.headers['Authorization'] = 'Bearer ' + this.token;
+    // this.getLists = function() {
+    //   listService.fetchLists();
+    // }
     
     this.deleteList = function() {
       listService.deleteList(this.list._id)

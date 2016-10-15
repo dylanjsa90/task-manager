@@ -4,7 +4,7 @@ module.exports = function(app) {
   app.directive('dsList', function() {
     return {
       restrict: 'E',
-      replace: true,
+      // replace: true,
       controller: 'ListController',
       controllerAs: 'listCtrl',
       template: require('./list_template.html'),

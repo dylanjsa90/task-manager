@@ -7,10 +7,10 @@ module.exports = function(app) {
     };
   }]);
 
-  app.directive('dsNoteList', function() {
+  app.directive('dsNoteLi', function() {
     return {
       restrict: 'E',
-      replace: true,
+      // replace: true,
       template: require('./note_list_template.html'),
       controller: 'NoteController',
       controllerAs: 'noteCtrl',

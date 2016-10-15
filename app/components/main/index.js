@@ -17,7 +17,9 @@ module.exports = function(app) {
     this.createList = function() {
       listService.createList(this.list, this.config).then(() => {
         this.list = {};
-        this.lists = listService.lists;
+        listService.fetchLists().then((lists) => {
+          this.lists = lists;
+        }).catch(err => alert('error ' + err));
       }).catch(() => {
         this.list = {};
         alert('List creation failed');
