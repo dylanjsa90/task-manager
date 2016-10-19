@@ -1,6 +1,5 @@
 <div class="app-list">
-  <h2>List: {{listCtrl.list.name}}</h2>
-  <i class="fa fa-trash-o" data-ng-click="listCtrl.deleteList()"></i>
+  <h2>List: {{listCtrl.list.name}} | <i class="fa fa-trash-o delete-icon" data-ng-click="listCtrl.deleteList()"></i></h2>
   <ul>
     <li>
       <list-note-form create-note="listCtrl.createNote(note)"></list-note-form>

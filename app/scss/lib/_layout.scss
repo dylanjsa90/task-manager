@@ -35,8 +35,8 @@
 
 .app-main {
   display: flex;
-  
-  flex-flow: column-wrap;
+  flex-direction: row;
+  flex-wrap: wrap;
   align-content: stretch;
 }
 

@@ -3,7 +3,7 @@
 module.exports = function(app) {
   app.controller('MainController', ['listService', 'auth', '$location', function(listService, auth, $location) {
     this.lists = [];
-    
+    this.user = auth.getUser();
     this.token = auth.getToken();
     if (!this.token) $location.path('/signup');
     this.config.headers['Authorization'] = 'Bearer ' + this.token;

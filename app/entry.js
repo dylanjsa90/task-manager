@@ -36,7 +36,7 @@ listApp.config(['$routeProvider', '$httpProvider', ($rp, $httpProvider) => {
       template: require('./html/sign_in.html')
     })
     .when('/home', {
-      template: require('./html/notes.html')
+      template: require('./html/notes.html'),
     })
     .otherwise({
       redirectTo: '/notes'

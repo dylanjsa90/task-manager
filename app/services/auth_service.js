@@ -20,7 +20,8 @@ module.exports = function(app) {
         let token = this.getToken({noRedirect: true});
         if (!token) return;
         let decoded = jwtHelper.decodeToken(token);
-        this.currentUser.username = decoded.username;
+        console.log(decoded);
+        this.currentUser.username = decoded.idd;
         return this.currentUser.username;
       },
       logOut: function() {

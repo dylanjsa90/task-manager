@@ -17,13 +17,6 @@ body {
   text-align: center;
 }
 
-main {
-  margin: 2% auto;
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-}
-
 .list-form {
   display: flex;
   flex-direction: column;
@@ -33,14 +26,6 @@ main {
   // width: 20%;
 }
 
-ds-list {
-  margin-top: 10px;
-  display: flex;
-  flex-direction: row;
-  // flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-}
 .title-subhead {
   border: 5px solid black;
   display: inline-block;
@@ -57,4 +42,8 @@ sign-up, sign-in {
 
 li {
   list-style: none;
+}
+
+.delete-icon {
+  color: red;
 }
