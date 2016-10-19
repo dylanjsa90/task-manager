@@ -17,12 +17,16 @@ body {
 }
 main {
   height: 100%;
-  margin-left: 2%;
-  margin-right: 2%;
+  
 }
 
 .main-title {
   text-align: center;
+  background-color: black;
+  color: lightgray;
+  width: 100%;
+  margin-top: 0px;
+  padding: 3px;
 }
 
 .list-form {
@@ -48,5 +52,10 @@ li {
 }
 
 .delete-icon {
+  margin-left: 2px;
   color: red;
+}
+
+.delete-icon:hover {
+  color: orange;
 }

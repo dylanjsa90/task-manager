@@ -53,13 +53,16 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  width: 100%;
   height: 100%;
 }
 
 .list-form {
   display: flex;
-  width: 50%;
   margin: 0px auto;
+}
+
+ds-main {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }

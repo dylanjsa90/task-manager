@@ -5,19 +5,8 @@ module.exports = function(app) {
     let service = {};
     let url = `${__API_URL__}/api/list`;
     service.lists = [];
-    // this.config = $rootScope.noteHttpConfig;
-    // this.token = auth.getToken();
-    // this.config.headers['Authorization'] = 'Bear ' + this.token; 
 
     service.createList = function(data, config) {
-      // let token = auth.getToken();
-      // let config = {
-      //   headers: {
-      //     'Authorization': 'Bear ' + token,
-      //     'Content-Type': 'application/json',
-      //     'Accept': 'application/json'
-      //   }
-      // };
       console.log('creating list...');
       return $q((resolve, reject) => {
         $http.post(url, data, config)
