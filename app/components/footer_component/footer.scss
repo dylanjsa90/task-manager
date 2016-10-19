@@ -1,0 +1,15 @@
+.footer {
+  display: flex;
+  flex: 1;
+  align-items: stretch;
+  justify-content: center;
+  // align-self: flex-end;
+  padding: 1rem;
+  background-color: lightblue;
+}
+
+.footer-component {
+  width: 100%;
+  
+  align-self: flex-end;
+}

@@ -21,12 +21,12 @@ module.exports = function(app) {
         if (!token) return;
         let decoded = jwtHelper.decodeToken(token);
         console.log(decoded);
-        this.currentUser.username = decoded.idd;
+        this.user = decoded.idd;
         return this.currentUser.username;
       },
       logOut: function() {
         $window.localStorage.token = '';
-        this.currentUser = '';
+        this.user = '';
         this.token = '';
         $location.path('signin');
       }

@@ -1,8 +1,8 @@
 <form class="list-form form-inline" novalidate data-ng-submit="listFormCtrl.createList()">
   <div class="form-group">
-    <label for="name">Create List:</label>
+    <label for="name">Create Task:</label>
     <input type="text" name="name" data-ng-model="listFormCtrl.list.name" required>
+    <button type="submit" class="btn btn-default">+</button>
   </div>
-  <button type="submit" class="btn btn-default">+</button>
   <data-ng-transclude></data-ng-transclude>
 </form>

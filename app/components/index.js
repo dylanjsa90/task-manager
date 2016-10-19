@@ -9,4 +9,5 @@ module.exports = function(app) {
   require('./note_form')(app);
   require('./note_list')(app);
   require('./main')(app);
+  require('./footer_component')(app);
 };
