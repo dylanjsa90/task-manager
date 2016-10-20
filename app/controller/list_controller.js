@@ -6,6 +6,7 @@ module.exports = function(app) {
 
 function ListController($log, $http, auth) {
   this.token = auth.getToken();
+  this.user = auth.user;
   this.config.headers['Authorization'] = 'Bearer ' + this.token;
   this.lists = [];
   this.noteUrl = `${this.baseUrl}/api/note`;
@@ -17,7 +18,7 @@ function ListController($log, $http, auth) {
   // List CRUD methods
   this.getLists = function() {
     $log.debug('listCtrl : getLists()');
-    $http.get(`${this.listUrl}`, this.config)
+    $http.get(`${this.listUrl}/user/${this.user}`, this.config)
       .then( res => {
         $log.log('succes', res.data);
         this.lists = res.data;
@@ -28,6 +29,7 @@ function ListController($log, $http, auth) {
   };
 
   this.removeList = function(list) {
+    list.user = this.user;
     $log.debug('listCtrl : removeList()');
     $http.delete(`${this.listUrl}/${list._id}`, this.config)
       .then(res => {
@@ -39,6 +41,7 @@ function ListController($log, $http, auth) {
   };
 
   this.updateList = function(list) {
+    list.user = this.user;
     $log.debug('listCtrl : updateList()');
     $http.put(`${this.listUrl}/${list._id}`, list, this.config)
       .then(res => {
@@ -52,6 +55,7 @@ function ListController($log, $http, auth) {
 
   this.addList = function(list) {
     $log.debug('listCtrl : addlist()');
+    list.user = this.user;
     $http.post(`${this.listUrl}`, list, this.config)
       .then(res => {
         $log.log('success', res.data);

@@ -27,9 +27,7 @@ module.exports = function(app) {
           console.log(err);
         });
     };
-    // this.getUser = function() {
-    //   auth.getUser
-    // }
+
     this.getUser = auth.getUser.bind(auth);
     this.logOut = auth.logOut.bind(auth);
     this.user = auth.user;

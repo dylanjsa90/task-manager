@@ -7,7 +7,7 @@ module.exports = function(app) {
     service.lists = [];
 
     service.createList = function(data, config) {
-      console.log('creating list...');
+      console.log('creating list...' + data);
       return $q((resolve, reject) => {
         $http.post(url, data, config)
         .then(res => {
@@ -21,8 +21,9 @@ module.exports = function(app) {
     };
 
     service.fetchLists = function() {
+      let user = auth.user;
       return $q((resolve, reject) => {
-        $http.get(url)
+        $http.get(url + '/user/' + user)
           .then(res => {
             this.lists = res.data;
             resolve(res.data);
