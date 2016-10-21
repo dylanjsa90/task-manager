@@ -1,9 +1,3 @@
-#signup-footer {
-  width: 100%;
-  margin-top: 5px;
-  text-align: center;
-}
-
 .signup-layout {
   display: flex;
   flex-direction: column;
@@ -42,12 +36,13 @@
 }
 
 .app-list {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  justify-content: center;
-  margin: 0px 5px 0px 5px;  
+  text-align: center;
+  margin-left: 5px;
+  margin-right: 5px;
+  padding: 5px;
+  border: 1px solid black;
 }
+
 
 .flex-container {
   display: flex;
@@ -56,13 +51,9 @@
   height: 100%;
 }
 
-.list-form {
-  display: flex;
-  margin: 0px auto;
-}
-
 ds-main {
   display: flex;
   flex-direction: column;
   flex: 1;
 }
+

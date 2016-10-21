@@ -1,8 +1,9 @@
 <div class="app-list">
-  <h2>Task: {{listCtrl.list.name}} <i class="fa fa-trash-o delete-icon" data-ng-click="listCtrl.deleteList()"></i></h2>
+  <h2>{{listCtrl.list.name}} <i class="fa fa-trash-o delete-icon" data-ng-click="listCtrl.deleteList()"></i></h2>
   <ul>
     <li>
       <list-note-form create-note="listCtrl.createNote(note)"></list-note-form>
+      <h4>Task Todo's: </h4>
       <ds-note-li data-ng-repeat="item in listCtrl.list.notes" note="item" remove="listCtrl.deleteNote(note)" ></ds-note-li>
     </li>
   </ul>
