@@ -3,6 +3,7 @@
 @import "_theme";
 @import "_main";
 @import "_layout";
+@import "_links";
 
 html, body {
   width: 100%;
@@ -20,6 +21,7 @@ main {
   height: 100%;
   display: flex;
   flex-direction: column;
+  // align-items: center;
 }
 
 .main-title {
@@ -40,6 +42,7 @@ main {
 .title-subhead {
   border: 5px solid black;
   flex: 1;
+  padding: 10px;
 }
 
 sign-up, sign-in {
@@ -78,6 +81,11 @@ ul {
 .delete-icon:hover {
   color: orange;
 }
+
+// ds-list {
+//   display: flex;
+//   align-content: center;
+// }
 
 
 
