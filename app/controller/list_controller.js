@@ -67,8 +67,6 @@ function ListController($log, $http, auth) {
 
   this.addNote = function(note) {
     $log.debug('listItemCtrl : addNote()');
-    // let newNote = note;
-    // newNote.listId = this.listId;
     $http.post(`${this.noteUrl}`, note, this.config)
       .then(res => {
         $log.log('success', res.data);
@@ -89,7 +87,6 @@ function ListController($log, $http, auth) {
       }); 
   };
 
-  // Useless for this application but I figured why not since the routes already there
   this.getNotes = () => {
     $log.debug('listItemCtrl : getNotes()');
     $http.get(`${this.noteUrl}`, this.config)
