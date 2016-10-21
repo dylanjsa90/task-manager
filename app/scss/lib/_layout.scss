@@ -1,15 +1,10 @@
-#signup-footer {
-  width: 100%;
-  margin-top: 5px;
-  text-align: center;
-}
-
 .signup-layout {
-  width: 100%;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: flex-end;
 }
+
 
 .signup-form {
   display: flex;
@@ -19,8 +14,8 @@
 }
 
 .signin-layout {
-  width: 100%;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: flex-end;
 }
@@ -31,3 +26,34 @@
   align-items: center;
   justify-content: flex-end;
 }
+
+.app-main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: stretch;
+  justify-content: center;
+}
+
+.app-list {
+  text-align: center;
+  margin-left: 5px;
+  margin-right: 5px;
+  padding: 5px;
+  border: 1px solid black;
+}
+
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+ds-main {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+

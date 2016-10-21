@@ -20,7 +20,11 @@ listApp.run(['$rootScope', ($rs) => {
   };
 }]);
 
-listApp.config(['$routeProvider', ($rp) => {
+listApp.config(['$routeProvider', '$httpProvider', ($rp, $httpProvider) => {
+  $httpProvider.defaults.headers.post = {
+    'Content-Type': 'application/json',
+    'Accept': 'application/json',
+  };
   $rp
     .when('/notes', {
       template: require('./html/notes.html')
@@ -31,8 +35,11 @@ listApp.config(['$routeProvider', ($rp) => {
     .when('/signin', {
       template: require('./html/sign_in.html')
     })
+    .when('/home', {
+      template: require('./html/notes.html'),
+    })
     .otherwise({
-      redirectTo: 'notes'
+      redirectTo: '/notes'
     });
 }]);
 

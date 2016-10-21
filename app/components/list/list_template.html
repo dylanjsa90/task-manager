@@ -1,13 +1,10 @@
-<div ng-init="listCtrl.getAllLists()">
-  <ds-list-form data-button-text="Create List" save="listCtrl.createList(list)"></ds-list-form>
-  <h1>Lists: </h1>
-  <ul data-ng-repeat="list in listCtrl.lists" data-list="list">
-      <h3 data-ng-if="!list.editing">{{list.name}}
-        <button class="btn btn-default" data-ng-click="listCtrl.deleteList(list)">x</button>
-        <button class="btn btn-default" data-ng-click="list.editing = true">Edit</button>
-      </h3>
-      <ds-list-form save="listCtrl.updateList(list)" button-text="Rename list" list="list" ng-if="list.editing">
-        <button class="btn btn-default" data-ng-click="list.editing = false">Cancel</button>
-      </ds-list-form>
+<div class="app-list">
+  <h2>{{listCtrl.list.name}} <i class="fa fa-trash-o delete-icon" data-ng-click="listCtrl.deleteList()"></i></h2>
+  <ul>
+    <li>
+      <list-note-form create-note="listCtrl.createNote(note)"></list-note-form>
+      <h4>Task Todo's: </h4>
+      <ds-note-li data-ng-repeat="item in listCtrl.list.notes" note="item" remove="listCtrl.deleteNote(note)" ></ds-note-li>
+    </li>
   </ul>
 </div>

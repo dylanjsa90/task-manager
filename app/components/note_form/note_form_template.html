@@ -1,0 +1,7 @@
+<form class="note-form" novalidate data-ng-submit="noteFormCtrl.saveNote()">
+  <div class="form-group">
+    <label for="content">Add Content: </label>
+    <input type="text" name="content" required data-ng-model="noteFormCtrl.note.content">
+    <button type="submit" class="btn btn-default"> + </button>
+  </div>
+</form>

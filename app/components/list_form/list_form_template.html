@@ -1,10 +1,8 @@
-<form class="list-form" novalidate data-ng-submit="listFormCtrl.saveAndClear(listFormCtrl.list)">
-  <h3>Create new list</h3>
+<form class="list-form form-inline" novalidate data-ng-submit="listFormCtrl.createList()">
   <div class="form-group">
-    <label for="name">Name: </label>
-    <input type="text" name="name" data-ng-model="listFormCtrl.list.name">
+    <label for="name">Create Task or List:</label>
+    <input type="text" name="name" data-ng-model="listFormCtrl.list.name" required>
+    <button type="submit" class="btn btn-default">+</button>
   </div>
-
-  <button type="submit" class="btn btn-default">{{listFormCtrl.buttonText}}</button>
   <data-ng-transclude></data-ng-transclude>
 </form>

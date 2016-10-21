@@ -1,13 +1,17 @@
 'use strict';
 
 module.exports = (app) => {
-  app.controller('ListFormController', ['$scope', function($scope) {
-    this.list = $scope.list || {};
-    this.buttonText = $scope.buttonText;
-    this.save = $scope.save;
-    this.saveAndClear = () => {
-      this.save({list: this.list});
-      if (!$scope.list) this.list = null;
+  app.controller('ListFormController', ['listService', 'auth', function(listService, auth) {
+    this.list = {};
+    this.createList = function() {
+      this.list.user = auth.user;
+      console.log(this.list);
+      listService.createList(this.list, this.config).then(() => {
+        this.list = {};
+      }).catch(() => {
+        this.list = {};
+        alert('List creation failed');
+      });
     };
   }]);
 };
